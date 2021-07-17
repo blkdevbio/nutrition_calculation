@@ -1,0 +1,8 @@
+{% extends 'crud/base.html' %}
+
+{% block content %}
+<h1>{{ post.menu }}</h1>
+<h2>カロリー：{{ post.calorie }}</h2>
+<h2>日付：{{ post.date }}</h2>
+<button onclick='location.href="{% url 'index' %}"'>戻る</button>
+{% endblock %}

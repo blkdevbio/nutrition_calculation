@@ -1,0 +1,21 @@
+{% extends 'crud/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class = 'post'>
+            <h2><a href="{% url 'detail' id=post.id %}">{{ post.menu }}</a><h2>
+            <div class="edit">
+                <button onclick='location.href="{% url 'edit' id=post.id %}"'>編集</button>
+            </div>
+            <div class="delete">
+                <button onclick='location.href="{% url 'delete' id=post.id %}"'>消去</button>
+            </div>
+        </div>
+    {% endfor %}
+    <div class='sumCalorieList'>
+        {% for date in dateList %}
+            <p>・{{ date.0 }}</p>
+            <p>摂取カロリー：{{ date.1.calorie__sum }}[kcal]</p>
+        {% endfor %}
+    </div>
+{% endblock %}
