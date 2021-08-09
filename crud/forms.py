@@ -1,4 +1,5 @@
 from django import forms
+from .models import Menu
 
 class CreateForm(forms.Form):
     menu = forms.CharField(label='menu')

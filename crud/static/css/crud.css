@@ -7,6 +7,43 @@
     color:white;
 }
 
+/* index.html */
 .post{
+    display: block;
     background-color: #EFBD92;
+    padding-bottom: 40px;
+    position: relative;
+}
+.menu-name{
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.button{
+    float:right;
+    background-color: #639ED1;
+    border: solid #EFBD92;
+    color: white;
+    border-radius: 20px;
+}
+.button:hover{
+    opacity: 0.8;
+}
+
+/* create.html */
+.form-container{
+    text-align: center;
+}
+.form-container h1{
+    margin-bottom: 40px;
+}
+.form-content{
+    margin-top: 10px;
+}
+
+/* detail.html */
+.detail-container{
+    text-align: center;
 }

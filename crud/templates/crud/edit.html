@@ -1,9 +1,28 @@
 {% extends 'crud/base.html' %}
+{% load widget_tweaks %}
 
 {% block content %}
 <form method='post' action="{% url 'update' id=post.id %}">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">編集</button>
+    <div class="form-container">
+        <h1>編集</h1>
+        <div class="form-content">
+            メニュー：
+            {{ form.menu|add_class:"menu" }}
+        </div>
+        <br>
+        <div class="form-content">
+            カロリー：
+            {{ form.calorie|add_class:"calorie" }}
+        </div>
+        <br>
+        <div class="form-content">
+            日付：
+            {{ form.date|add_class:"date" }}
+        </div>
+        <br>
+        <button type="submit">作成</button>
+        <button onclick='location.href="{% url 'index' %}"'>戻る</button>
+    </div>
 </form>
 {% endblock %}
